@@ -1,0 +1,88 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #1e3a8a;
+  min-height: 10vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: #f1f1f1;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+.product_img{
+  object-fit: contain;
+    width: 100%;
+  height: 200px;
+}
+/* NAV BACKGROUND */
+.custom-nav {
+  background: linear-gradient(135deg, #1e3c72, #2a5298);
+  padding: 12px;
+  display: flex;
+  justify-content: center;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+}
+
+/* GENERAL BUTTON STYLE */
+.nav-btn {
+  text-decoration: none;
+  color: white;
+  padding: 8px 16px;
+  margin: 5px;
+  border-radius: 20px;
+  font-size: 14px;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+/* INDIVIDUAL COLORS */
+.nav-btn.home {
+  background: linear-gradient(135deg, #00c6ff, #0072ff);
+}
+
+.nav-btn.add {
+  background: linear-gradient(135deg, #00ff87, #60efff);
+  color: #003;
+}
+
+.nav-btn.signin {
+  background: linear-gradient(135deg, #ff416c, #ff4b2b);
+}
+
+.nav-btn.signup {
+  background: linear-gradient(135deg, #8e2de2, #4a00e0);
+}
+
+/* HOVER EFFECT */
+.nav-btn:hover {
+  transform: translateY(-2px) scale(1.05);
+  box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+}
