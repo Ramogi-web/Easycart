@@ -1,6 +1,7 @@
 import axios from 'axios';
 import React, { useState } from 'react'
 import { Link, useNavigate } from 'react-router-dom';
+import Footer from './Footer';
 
 const Signin = () => {
 
@@ -65,13 +66,13 @@ const Signin = () => {
   }
 
   return (
-<div className="vh-100 d-flex align-items-center justify-content-center px-3" 
+<div className="min-vh-100 d-flex flex-column align-items-center justify-content-center px-3" 
      style={{ 
        background: 'radial-gradient(circle at top right, #2a0845, #6441A5)', // Deep, rich purple radial
      }}>
     
     {/* Reduced width from col-md-5 to col-md-3 for a sleeker look */}
-    <div className="col-md-4 col-lg-3"> 
+    <div className="col-md-4 col-lg-3 flex-grow-1 py-5"> 
         <div className="card border-0 p-4 shadow-lg" 
              style={{ 
                borderRadius: '28px', 
@@ -143,6 +144,7 @@ const Signin = () => {
             </form>
         </div>
     </div>
+    <Footer/>
 </div>
   )
 }

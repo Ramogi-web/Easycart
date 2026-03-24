@@ -7,6 +7,9 @@ import Addproducts from './components/Addproducts';
 import Getproducts from './components/Getproducts';
 import Makepayment from './components/Makepayment';
 import Notfound from './components/Notfound';
+import Contact from './components/Contact';
+import ShippingPolicy from './components/ShippingPolicy';
+import ReturnsRefunds from './components/ReturnsRefunds';
 
 function App() {
   return (
@@ -35,6 +38,9 @@ function App() {
       <Route path='/signin' element={<Signin/>}/>
       <Route path='/addproducts' element={<Addproducts/>}/>
       <Route path='/makepayment' element={<Makepayment/>}/>
+      <Route path='/contactus' element={<Contact/>}/>
+      <Route path='/shippingpolicy' element={<ShippingPolicy/>}/>
+      <Route path='/return and refund policy' element={<ReturnsRefunds/>}/>
       <Route path='*' element={<Notfound/>}/>
 
 

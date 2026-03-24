@@ -2,6 +2,7 @@ import axios from 'axios'
 import React, { useState } from 'react'
 import { useLocation, useNavigate } from 'react-router-dom'
 import Loader from './Loader'
+import Footer from './Footer'
 
 const Makepayment = () => {
 //destructure  the  details passed from the Get products
@@ -135,7 +136,8 @@ const {product} = useLocation().state || {}
         </div>
       </div>
     </div>
-  </div>
+  </div><br />
+  <Footer/>
 </div>
   )
 }

@@ -1,6 +1,7 @@
 import axios from 'axios';
 import React, { useState } from 'react'
 import { Link } from 'react-router-dom';
+import Footer from './Footer';
 
 const Signup = () => {
 
@@ -63,13 +64,13 @@ const Signup = () => {
   }
 
   return (
-<div className='min-vh-100 d-flex align-items-center justify-content-center' 
+<div className='min-vh-100 d-flex flex-column align-items-center justify-content-center flex-grow-2 py-5' 
      style={{ 
        background: 'linear-gradient(135deg, #00d2ff 0%, #3a7bd5 100%)', 
        padding: '15px' 
      }}>
   
-  <div className="card border-0 p-4" 
+  <div className="card border-0 p-4 " 
        style={{ 
          borderRadius: '25px', 
          maxWidth: '360px', /* Smaller width for a cleaner look */
@@ -149,6 +150,7 @@ const Signup = () => {
       </div>
     </form>
   </div>
+  <Footer/>
 </div>
 )
 }

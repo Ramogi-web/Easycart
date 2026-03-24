@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import Loader from './Loader';
 import axios from 'axios';
+import Footer from './Footer';
 
 const Addproducts = () => {
   // Introduce the hooks
@@ -70,7 +71,9 @@ const Addproducts = () => {
 <div className='min-vh-100 d-flex align-items-center justify-content-center' 
      style={{ 
        background: 'linear-gradient(135deg, #11998e 0%, #38ef7d 100%)', 
-       padding: '20px' 
+       padding: '20px', 
+       display:'flex',
+       flexDirection: 'column'
      }}>
   
   <div className="card border-0 shadow-lg p-4" 
@@ -149,6 +152,7 @@ const Addproducts = () => {
 
     </form>
   </div>
+  <Footer/>
 </div>
   )
 }

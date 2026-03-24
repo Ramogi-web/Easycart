@@ -86,3 +86,46 @@
   transform: translateY(-2px) scale(1.05);
   box-shadow: 0 5px 15px rgba(0,0,0,0.3);
 }
+
+.carousel-img {
+  height: 450px;
+  object-fit: cover;
+  filter: brightness(85%) contrast(110%);
+}
+
+/* Smooth gradient overlay instead of harsh dark box */
+.carousel-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    to right,
+    rgba(0, 0, 0, 0.6),
+    rgba(0, 0, 0, 0.2),
+    transparent
+  );
+}
+
+/* Caption styling */
+.carousel-caption {
+  bottom: 25%;
+  left: 5%;
+  right: auto;
+  text-align: left;
+  z-index: 2;
+}
+
+.carousel-caption h2 {
+  font-size: 2.2rem;
+  font-weight: 700;
+  color: #fff;
+  text-shadow: 2px 2px 10px rgba(0,0,0,0.7);
+}
+
+.carousel-caption p {
+  font-size: 1.1rem;
+  color: #f1f1f1;
+  text-shadow: 1px 1px 8px rgba(0,0,0,0.6);
+}

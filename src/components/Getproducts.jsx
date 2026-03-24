@@ -2,6 +2,8 @@ import axios from 'axios';
 import React, { useEffect, useState } from 'react'
 import Loader from './Loader';
 import { useNavigate } from 'react-router-dom';
+import Footer from './Footer';
+import Mycarousel from './Mycarousel';
 
 const Getproducts = () => {
 
@@ -54,7 +56,7 @@ const Getproducts = () => {
 <div className='p-4 min-vh-100' 
      style={{ 
        backgroundColor: '#f0f4f8', 
-       fontFamily: "'Inter', sans-serif" 
+       fontFamily: "'Inter', sans-serif", 
      }}>
   
   <div className="container">
@@ -62,6 +64,7 @@ const Getproducts = () => {
       <h1 className='fw-bold' style={{ color: '#1a2a6c', fontSize: '2.5rem' }}>Our Collection</h1>
       <div style={{ height: '4px', width: '45px', background: 'linear-gradient(to right, #ff0080, #7928ca)', margin: '12px auto', borderRadius: '10px' }}></div>
       <p className="text-muted small">Quality Electronics, delivered to your door step</p>
+      <Mycarousel/>
     </div>
 
     {loading && <div className="text-center py-5"><Loader /></div>}
@@ -135,6 +138,7 @@ const Getproducts = () => {
       ))}
     </div>
   </div>
+  <Footer/>
 </div>
 )
 }
