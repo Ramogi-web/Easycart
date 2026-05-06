@@ -45,7 +45,7 @@ const Footer = ({ developerName = "Ramogi" }) => {
           <ul style={{ listStyle: 'none', padding: 0, fontSize: '14px' }}>
             <li style={{ marginBottom: '8px' }}> <Link to='/contactus' >Contact us</Link></li>
             <li style={{ marginBottom: '8px' }}> <Link to='/shippingpolicy' >Shipping Policy</Link> </li>
-            <li style={{ marginBottom: '8px' }}> <Link to='return and refund policy'>Returns & Refunds</Link></li>
+            <li style={{ marginBottom: '8px' }}> <Link to='return_and_refund_policy'>Returns & Refunds</Link></li>
           </ul>
         </div>
 

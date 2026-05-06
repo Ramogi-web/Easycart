@@ -80,6 +80,12 @@
 .nav-btn.signup {
   background: linear-gradient(135deg, #8e2de2, #4a00e0);
 }
+.nav-btn.logout{
+  background: linear-gradient(135deg, #b78fda, #e00f00);
+}
+.nav-btn.cart{
+  background: linear-gradient(135deg, #14150f, #e00f00);
+}
 
 /* HOVER EFFECT */
 .nav-btn:hover {
