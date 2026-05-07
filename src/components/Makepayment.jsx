@@ -78,11 +78,13 @@ const Makepayment = () => {
   }
 
   return (
-    <div className='min-vh-100 p-4'
+    <div
+      className='min-vh-100 p-4'
       style={{
         background: 'linear-gradient(135deg, #f0fdf4 0%, #dcfce7 100%)',
         fontFamily: "'Inter', sans-serif"
-      }}>
+      }}
+    >
 
       <div className="container">
 
@@ -96,8 +98,10 @@ const Makepayment = () => {
             ← Back
           </button>
 
-          <h2 className='flex-grow-1 text-center fw-bold m-0'
-            style={{ color: '#15803d' }}>
+          <h2
+            className='flex-grow-1 text-center fw-bold m-0'
+            style={{ color: '#15803d' }}
+          >
             Lipa na <span style={{ color: '#fbbf24' }}>M-Pesa</span>
           </h2>
         </div>
@@ -105,18 +109,23 @@ const Makepayment = () => {
         <div className="row justify-content-center">
           <div className="col-md-8 col-lg-6">
 
-            <div className="card border-0 shadow-lg"
-              style={{ borderRadius: '25px', overflow: 'hidden' }}>
+            <div
+              className="card border-0 shadow-lg"
+              style={{ borderRadius: '25px', overflow: 'hidden' }}
+            >
 
               <div className="p-4 bg-white">
 
-                {/* 🧾 CART SUMMARY (ONLY IF CART) */}
+                {/* 🧾 CART SUMMARY */}
                 {cart && cart.length > 0 && (
                   <>
                     <h4 className="fw-bold mb-3">Order Summary</h4>
 
                     {cart.map((item, index) => (
-                      <div key={index} className="d-flex justify-content-between mb-2">
+                      <div
+                        key={index}
+                        className="d-flex justify-content-between mb-2"
+                      >
                         <span>{item.product_name}</span>
                         <span>Kes {item.product_cost}</span>
                       </div>
@@ -128,23 +137,47 @@ const Makepayment = () => {
 
                 {/* 📦 SINGLE PRODUCT */}
                 {product && (
-                  <div className="mb-3">
-                    <h3 className="fw-bold">{product.product_name}</h3>
+                  <div className="mb-3 text-center">
+
+                    <img
+                      src={img_url + product.product_photo}
+                      alt={product.product_name}
+                      className="img-fluid mb-3"
+                      style={{
+                        maxHeight: "250px",
+                        objectFit: "contain",
+                        borderRadius: "15px"
+                      }}
+                    />
+
+                    <h3 className="fw-bold">
+                      {product.product_name}
+                    </h3>
+
                     <p className="text-muted small">
                       {product.product_description?.slice(0, 100)}...
                     </p>
+
                   </div>
                 )}
 
                 {/* 💰 TOTAL */}
-                <div className="p-3 mb-4 d-flex justify-content-between align-items-center"
+                <div
+                  className="p-3 mb-4 d-flex justify-content-between align-items-center"
                   style={{
                     background: '#f8fafc',
                     borderRadius: '15px',
                     border: '1px dashed #cbd5e1'
-                  }}>
-                  <span className="text-muted fw-medium">Total Amount:</span>
-                  <span className="fs-4 fw-bold" style={{ color: '#15803d' }}>
+                  }}
+                >
+                  <span className="text-muted fw-medium">
+                    Total Amount:
+                  </span>
+
+                  <span
+                    className="fs-4 fw-bold"
+                    style={{ color: '#15803d' }}
+                  >
                     Kes {totalAmount}
                   </span>
                 </div>
@@ -152,9 +185,23 @@ const Makepayment = () => {
                 {/* FORM */}
                 <form onSubmit={handlesubmit}>
 
-                  {loading && <div className="text-center mb-2"><Loader /></div>}
-                  {success && <div className="alert alert-success py-2 small border-0">{success}</div>}
-                  {error && <div className="alert alert-danger py-2 small border-0">{error}</div>}
+                  {loading && (
+                    <div className="text-center mb-2">
+                      <Loader />
+                    </div>
+                  )}
+
+                  {success && (
+                    <div className="alert alert-success py-2 small border-0">
+                      {success}
+                    </div>
+                  )}
+
+                  {error && (
+                    <div className="alert alert-danger py-2 small border-0">
+                      {error}
+                    </div>
+                  )}
 
                   <div className="mb-3">
                     <input

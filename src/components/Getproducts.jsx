@@ -211,6 +211,7 @@ const Getproducts = () => {
                     src={img_url + product.product_photo}
                     className='w-100 h-100'
                     style={{ objectFit: 'cover', borderRadius: '15px' }}
+                    alt="product"
                   />
                 </div>
 
